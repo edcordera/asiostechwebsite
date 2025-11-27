@@ -1,190 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – ASIOS LLC</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Privacy Policy — ASIOS LLC</title>
+  <meta name="description" content="Privacy policy for ASIOS LLC — apps for everyday enjoyment.">
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: black;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 40px;
-      font-weight: 600;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      background: white;
-      margin-top: -40px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-      border-radius: 10px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    h3 {
-      margin-top: 30px;
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-    p, li {
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #555;
-      font-size: 14px;
-    }
+    :root{--bg:#fafafa;--card:#fff;--muted:#6b7280;--accent:#0a84ff;--max:980px}
+    *{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);margin:0;color:#0b1220}
+    header{background:#0b1220;color:#fff;padding:56px 20px;text-align:center}
+    header h1{margin:0;font-size:28px;letter-spacing:.3px}
+    .container{max-width:var(--max);margin:-28px auto 64px;padding:36px;background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(10,20,40,0.06)}
+    h2{font-size:20px;margin-top:24px}
+    p, li{font-size:15px;color:#111;margin-top:10px}
+    ul{padding-left:20px}
+    .muted{color:var(--muted);font-size:14px;margin-top:8px}
+    footer{text-align:center;padding:28px 20px;color:var(--muted);font-size:13px}
+    .note{background:#f5f7fb;padding:12px;border-radius:8px;margin-top:12px;border:1px solid #eef2f7}
+    a{color:var(--accent);text-decoration:none}
+    @media(max-width:640px){header{padding:36px 16px}.container{margin: -16px 16px 32px;padding:20px}}
   </style>
 </head>
-
 <body>
   <header>
     <h1>Privacy Policy</h1>
+    <div class="muted">Effective date: November 27, 2025 — ASIOS LLC</div>
   </header>
 
-  <div class="container">
+  <main class="container" role="main">
+    <p><strong>ASIOS LLC</strong> ("we", "our", "us") cares about your privacy. This page explains our policies with respect to the collection, use, disclosure, and retention of Personal Information in connection with our websites and mobile applications (collectively, the "Software" or "Services").</p>
 
-    <p>
-      ASIOS LLC values your privacy. We collect and use personal information only as needed to deliver our products, services, websites, and mobile applications, and to communicate with you about them (collectively, our “Services”).
-    </p>
+    <p class="note"><strong>Important:</strong> This Privacy Policy is intended to meet the requirements of app marketplaces (Apple App Store and Google Play) and to be broad enough to cover current and future functionality, including AI/photo processing, analytics, and integrations with third-party services.</p>
 
-    <p>Your personal information may include:</p>
+    <h2>Scope & Acceptance</h2>
+    <p>By using our Software you agree to the collection and use of information in accordance with this policy. If you do not agree, do not use the Software or the Services.</p>
+
+    <h2>What information we may collect</h2>
+    <p>Depending on how you use our Software, we may collect some or all of the following categories of information:</p>
     <ul>
-      <li>Name</li>
-      <li>Address</li>
-      <li>Telephone number</li>
-      <li>Email address</li>
-      <li>Company name</li>
-      <li>Billing and payment information</li>
-      <li>Candidate information (for job applicants)</li>
-      <li>Other data that could directly or indirectly identify you</li>
+      <li><strong>Identifiers:</strong> Device identifiers, advertising IDs, user IDs, account names.</li>
+      <li><strong>Contact information:</strong> Email address, phone number, postal address (if provided).</li>
+      <li><strong>App content & media:</strong> Photos or other media you upload when using features that process images (see "Photo Processing").</li>
+      <li><strong>Usage & analytics:</strong> Pages/screens viewed, features used, timestamps, session length, performance metrics.</li>
+      <li><strong>Diagnostics / Log Data:</strong> Crash logs, error reports, IP address, device model, OS version, app configuration and other technical data automatically collected when using the Software.</li>
+      <li><strong>Payment & billing:</strong> Billing and payment information if you purchase paid features (payment processors may collect and store payment credentials separately).</li>
+      <li><strong>Other information:</strong> Any information you voluntarily provide via forms, feedback, support tickets, or correspondence.</li>
     </ul>
 
-    <p>
-      This Privacy Policy explains how and why we use your personal information, as well as how you can access, update, and control your data. If you have questions, you may contact our Data Protection Officer (“DPO”) at:
-      <strong>ed@asios.tech</strong>.
-    </p>
-
-    <h2>Information We Collect and How We Collect It</h2>
-
-    <p>We collect personal information when you:</p>
+    <h2>How we collect information</h2>
+    <p>We collect information in three primary ways:</p>
     <ul>
-      <li>Create an account or purchase Services</li>
-      <li>Connect our Services to third-party accounts</li>
-      <li>Request customer support</li>
-      <li>Complete forms, sign up for newsletters, or download resources</li>
-      <li>Participate in surveys, contests, or promotions</li>
-      <li>Apply for employment</li>
+      <li><strong>Directly from you:</strong> When you create an account, contact support, submit feedback, or otherwise provide data.</li>
+      <li><strong>Automatically:</strong> Through cookies, SDKs, and other tracking technologies embedded in the Software that gather usage, performance, and diagnostic data.</li>
+      <li><strong>From third parties:</strong> When you connect third-party services (for example, social or marketplace accounts) or when service integrations supply data to enable functionality.</li>
     </ul>
 
-    <p>We also use cookies, analytics tools, log files, metadata, device identifiers, and performance-data tracking to enhance and secure our Services.</p>
-
-    <h2>How We Use Information</h2>
-
-    <p>
-      We limit our use of your information to what is necessary to:
-    </p>
+    <h2>Third-party services and SDKs</h2>
+    <p>Our Software may use third-party services and libraries that collect data to operate, improve, and monetize the Software. These may include (but are not limited to):</p>
     <ul>
-      <li>Provide, operate, and maintain the Services</li>
-      <li>Improve, personalize, and expand the Services</li>
-      <li>Understand and analyze how you use the Services</li>
-      <li>Develop new products, services, features, and functionality</li>
-      <li>Contact you about your account or support requests</li>
-      <li>Meet legal, compliance, and regulatory obligations</li>
+      <li>Apple (App Store delivery, in-app purchases, and related services)</li>
+      <li>Google Play Services and related Google platforms</li>
+      <li>Analytics & crash reporting (e.g., Google Analytics for Firebase)</li>
+      <li>Advertising platforms (e.g., AdMob or similar ad networks)</li>
+      <li>AI providers for photo or content processing (e.g., OpenAI, Google Gemini, or other trusted AI providers)</li>
+    </ul>
+    <p>Links to the privacy policies of major third parties are available on their websites; we encourage you to review them. We limit third-party access to only what is necessary for them to perform the services they provide to us.</p>
+
+    <h2>Log Data</h2>
+    <p>When you use our Software, we may collect Log Data — technical information recorded by our Software or by third-party SDKs, such as IP address, device type, operating system version, app configuration, timestamps, and other diagnostic or performance information used to monitor and improve the Services.</p>
+
+    <h2>Cookies & similar technologies</h2>
+    <p>Cookies are small files placed on your device. Our Software does not directly write browser cookies for native mobile apps, but third-party SDKs and web components (embedded webviews) may use cookies or similar local storage mechanisms to provide their services. You can usually manage tracking preferences in your device or browser settings; disabling some cookies or analytics may impact features of the Software.</p>
+
+    <h2>Service providers</h2>
+    <p>We may engage third-party companies and individuals to perform services on our behalf, such as hosting, payment processing, analytics, customer support, and AI processing. These service providers may have access to personal information only as necessary to perform their functions and are contractually required not to disclose or use the information for other purposes.</p>
+
+    <h2>Security</h2>
+    <p>We use industry-standard measures to protect personal information in transit and at rest (including encryption where appropriate). However, no method of transmission or electronic storage is completely secure. We cannot guarantee absolute security; please take care when transmitting sensitive information.</p>
+
+    <h2>Screen recording data</h2>
+    <p>Our application does not collect, use, disclose, share, or retain any screen recording data produced by the user. Any screen recordings initiated or saved by the user using device features or the Software are stored locally on the user’s device and are not transmitted to us unless you explicitly choose to share them (for example, via a support email or upload).</p>
+
+    <h2>Face detection</h2>
+    <p>If a feature uses face detection (for example, to detect the presence of a human face before enabling an image filter), face detection is performed locally on the device and we do not collect, store, or transmit facial biometric templates. Face detection is used only to enable features and not for identification or profiling.</p>
+
+    <h2>Photo processing & AI features</h2>
+    <p>Some features may send user-selected photos or inputs to our secure servers for temporary processing, and—where necessary—to trusted third-party AI providers (for example, OpenAI or Google Gemini) to generate requested effects or transformations. When we do so:</p>
+    <ul>
+      <li>The photo or input is transmitted over secure channels for processing and is used solely to fulfill the requested operation.</li>
+      <li>Photos and inputs sent for processing are not used to train third-party providers unless explicitly disclosed and agreed to by you.</li>
+      <li>We retain processed content only as necessary for service delivery, debugging, or as required by law; otherwise temporary copies are removed promptly as described in our retention practices.</li>
+    </ul>
+    <p>If a particular app feature processes media purely on device, that feature is called out in the app description and no photo data leaves your device.</p>
+
+    <h2>Links to other sites</h2>
+    <p>The Software may include links to third-party sites. We are not responsible for the privacy practices or content of external sites. Please review the privacy policy of any third party you interact with.</p>
+
+    <h2>Children’s privacy</h2>
+    <p>Our Software is not directed to children under 13 and we do not knowingly collect personal information from children under 13. If you learn that a child under 13 has provided us with personal information, please contact us and we will take steps to remove that information.</p>
+
+    <h2>How we use information</h2>
+    <p>We use collected information to:</p>
+    <ul>
+      <li>Provide and maintain the Software</li>
+      <li>Process transactions and provide customer support</li>
+      <li>Improve, personalize and develop new features</li>
+      <li>Analyze usage and perform diagnostics</li>
+      <li>Comply with legal obligations and protect rights</li>
     </ul>
 
-    <h2>How We Secure, Store, and Retain Data</h2>
+    <h2>Data retention</h2>
+    <p>We retain personal information only for as long as needed to provide the Services, fulfill the purposes described in this policy, comply with legal obligations, resolve disputes, and enforce agreements.</p>
 
-    <p>
-      We follow industry-standard security practices, including encryption where appropriate. We retain personal information only for as long as necessary to provide the Services and for legitimate legal or business purposes.
-    </p>
-
-    <h2>How to Access, Update, or Delete Your Data</h2>
-
-    <p>To access or update your personal information, sign in to your account and visit your settings page.</p>
-
-    <p>To delete or export your personal data, submit a request to <strong>ed@asios.tech</strong>.</p>
-
-    <h2>GDPR Compliance (EU/EEA Users)</h2>
-
-    <p>If you are located in the European Union, United Kingdom, or EEA, you are entitled to the following rights under GDPR:</p>
-
+    <h2>GDPR — EU/EEA/UK residents</h2>
+    <p>If you are located in the EU, EEA, or UK, you have certain rights regarding your personal data, including:</p>
     <ul>
-      <li><strong>Right to Access</strong> – Request copies of your data.</li>
-      <li><strong>Right to Rectification</strong> – Correct inaccurate information.</li>
-      <li><strong>Right to Erasure</strong> (“Right to be Forgotten”).</li>
-      <li><strong>Right to Restrict Processing</strong>.</li>
-      <li><strong>Right to Object to Processing</strong>, including marketing.</li>
-      <li><strong>Right to Data Portability</strong> – Obtain a copy in machine-readable format.</li>
-      <li><strong>Right Not to Be Subject to Automated Decision-Making</strong>.</li>
+      <li>Right of access</li>
+      <li>Right to rectification</li>
+      <li>Right to erasure (right to be forgotten)</li>
+      <li>Right to restrict processing</li>
+      <li>Right to data portability</li>
+      <li>Right to object to processing</li>
+      <li>Right to object to automated decision making</li>
     </ul>
-
-    <p>
-      To exercise GDPR rights, email: <strong>ed@asios.tech</strong>.
-    </p>
-
-    <p>
-      If you believe we have not handled your request appropriately, you may file a complaint with your local Data Protection Authority.
-    </p>
-
-    <h2>Age Restrictions</h2>
-
-    <p>
-      Our Services are available only to individuals age 18 or older. If you believe a minor has provided us with personal information, please contact us immediately.
-    </p>
-
-    <h2>Changes to This Policy</h2>
-
-    <p>
-      ASIOS LLC may update this Privacy Policy at any time. Changes will be posted on this page. For material changes, we will provide at least 30 days’ notice via email or website notification.
-    </p>
-
-    <h2>Contact Us</h2>
-
-    <p>If you have questions, concerns, or complaints regarding this Privacy Policy, contact our Data Protection Officer:</p>
-
-    <p><strong>Email:</strong> ed@asios.tech<br />
-    </p>
-
-    <p>We respond to all inquiries within 30 days.</p>
-  </div>
-
-  <footer>
-    © <span id="year"></span> ASIOS LLC. All rights reserved.
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    <p>To exercise these rights, contact us at <strong><a href="mailto:ed@asios.tech">ed@asios.tech</a></strong>. You may also lodge a complaint with your local data protection
