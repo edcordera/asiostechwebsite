@@ -136,5 +136,18 @@
       <div class="right"><a href="mailto:ed@asios.tech">ed@asios.tech</a></div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll("nav a").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === current) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    });
+    </script>    
 </body>
 </html>
