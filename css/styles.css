@@ -94,51 +94,6 @@ ul{
   color:var(--text);
 }
 
-.nav-toggle{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-}
-
-.nav-toggle-label{
-  display:none;
-  position:relative;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  border:1px solid var(--border-strong);
-  border-radius:999px;
-  background:var(--surface);
-  color:var(--text);
-  cursor:pointer;
-  flex:0 0 auto;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label::before,
-.nav-toggle-label::after{
-  content:"";
-  display:block;
-  width:16px;
-  height:1.5px;
-  background:currentColor;
-  transition:transform .18s ease, opacity .18s ease;
-}
-
-.nav-toggle-label::before,
-.nav-toggle-label::after{
-  position:absolute;
-}
-
-.nav-toggle-label::before{
-  transform:translateY(-5px);
-}
-
-.nav-toggle-label::after{
-  transform:translateY(5px);
-}
-
 .nav{
   display:flex;
   align-items:center;
@@ -172,18 +127,6 @@ ul{
 
 .nav a.cta:hover{
   background:#111111;
-}
-
-.nav-toggle:checked + .nav-toggle-label span{
-  opacity:0;
-}
-
-.nav-toggle:checked + .nav-toggle-label::before{
-  transform:rotate(45deg);
-}
-
-.nav-toggle:checked + .nav-toggle-label::after{
-  transform:rotate(-45deg);
 }
 
 main{
@@ -482,6 +425,8 @@ textarea:focus{
     padding-top:12px;
     padding-bottom:12px;
     gap:12px;
+    justify-content:center;
+    align-items:center;
   }
 
   .site-footer .wrap{
@@ -489,33 +434,28 @@ textarea:focus{
     align-items:flex-start;
   }
 
-  .nav-toggle-label{
-    display:inline-flex;
+  .site-header{
+    border-bottom:none;
   }
 
   .nav{
-    display:none;
     width:100%;
-    padding-top:10px;
-    border-top:1px solid var(--border);
-    flex-direction:column;
-    align-items:stretch;
+    justify-content:center;
     gap:8px;
+    padding-top:6px;
   }
 
   .nav a{
-    width:100%;
-    padding:10px 12px;
+    width:auto;
+    padding:7px 10px;
     border-radius:12px;
-    font-size:0.92rem;
+    font-size:0.84rem;
   }
 
   .nav a.cta{
     text-align:center;
-  }
-
-  .nav-toggle:checked ~ .nav{
-    display:flex;
+    padding-left:11px;
+    padding-right:11px;
   }
 
   .hero{
