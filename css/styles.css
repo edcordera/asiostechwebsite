@@ -83,6 +83,7 @@ ul{
   gap:18px;
   min-height:72px;
   position:relative;
+  flex-wrap: wrap;
 }
 
 .logo{
