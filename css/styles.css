@@ -135,7 +135,7 @@ main{
 }
 
 .eyebrow{
-  display:inline-block;
+  display:none;
   margin-bottom:18px;
   color:var(--text-faint);
   font-size:0.78rem;
