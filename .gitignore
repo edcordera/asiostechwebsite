@@ -16,6 +16,7 @@ Thumbs.db
 .project
 .classpath
 .settings/
+.DESIGN.md
 
 # Node modules (if using npm/node)
 node_modules/
