@@ -4,84 +4,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Feedback — ASIOS LLC</title>
-  <meta name="description" content="Send feedback to ASIOS LLC">
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .wrap.narrow { max-width: 760px; margin: 0 auto; padding: 28px; }
-  </style>
+  <meta name="description" content="Send feedback to ASIOS LLC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="index.html">ASIOS</a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.html" aria-current="page">Feedback</a>
         <a href="mailto:ed@asios.tech" class="cta">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap narrow">
-    <h1>Feedback</h1>
-    <p>We welcome your feedback. Tell us what you like, what you don't, or any bug reports. Your input helps improve our apps.</p>
-
-    <h2>Send feedback by email</h2>
-    <p>Click the button below to open your email client with a pre-filled subject line.</p>
-    <p><a class="button" href="mailto:ed@asios.tech?subject=ASIOS%20Feedback">Send feedback</a></p>
-
-    <h2>Quick feedback form</h2>
-
-    <form onsubmit="sendMail(event)">
-      <label for="name">Your name</label>
-      <input id="name" name="name" placeholder="Your name" />
-
-      <label for="subject">Subject</label>
-      <input id="subject" name="subject" placeholder="Short subject" />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" placeholder="Tell us what's on your mind"></textarea>
-
-      <div style="margin-top:12px;">
-        <button class="button" type="submit">Open email</button>
+  <main>
+    <section class="page-hero">
+      <div class="wrap narrow">
+        <div class="eyebrow">Feedback</div>
+        <h1>Tell us what is working and what is not.</h1>
+        <p>We welcome feedback, bug reports, and product suggestions. Your input helps us improve the applications we build and support.</p>
       </div>
-    </form>
+    </section>
 
-    <script>
-      function sendMail(e){
-        e.preventDefault();
-        var name = encodeURIComponent(document.getElementById('name').value || '');
-        var subject = encodeURIComponent(document.getElementById('subject').value || 'Feedback');
-        var body = encodeURIComponent(document.getElementById('message').value || '') + "%0A%0A" + "From: " + name;
-        var mailto = "mailto:ed@asios.tech?subject=" + subject + "&body=" + body;
-        window.location.href = mailto;
-      }
-    </script>
+    <section class="section">
+      <div class="wrap narrow stack">
+        <article class="content-card">
+          <h2>Send feedback by email</h2>
+          <p>If you would like to share feedback, report a bug, or contact us about one of our products, email us directly.</p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:ed@asios.tech?subject=ASIOS%20Feedback">General Feedback</a>
+            <a class="button secondary" href="mailto:ed@asios.tech?subject=ASIOS%20Bug%20Report">Bug Report</a>
+          </div>
+        </article>
 
-    <p><a href="index.html">Return home</a></p>
-    <h3>Cancel Subscription</h3>
-    <p>Payments and subscriptions are managed through the App Store. For details on managing your subscription visit: <a href="https://support.apple.com/en-au/118428">https://support.apple.com/en-au/118428</a>.</p>
+        <article class="content-card">
+          <h2>What to include</h2>
+          <p>When possible, include the app name, device type, and a short description of what happened. That makes it easier for us to understand the issue and follow up if needed.</p>
+        </article>
+
+        <article class="content-card">
+          <h2>Cancel subscription</h2>
+          <p>Payments and subscriptions are managed through the App Store. For details on managing your subscription, visit Apple Support.</p>
+          <p><a href="https://support.apple.com/en-au/118428">Manage your App Store subscription</a></p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="left"><strong>ASIOS LLC</strong></div>
-      <div class="right"><a href="mailto:ed@asios.tech">ed@asios.tech</a></div>
+      <div class="footer-brand">
+        <strong>ASIOS LLC</strong>
+        <div class="muted">Contact us for product feedback, support questions, and general inquiries.</div>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:ed@asios.tech">ed@asios.tech</a>
+      </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const current = window.location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll("nav a").forEach(link => {
-        const linkPage = link.getAttribute("href");
-        if (linkPage === current) {
-          link.setAttribute("aria-current", "page");
-        } else {
-          link.removeAttribute("aria-current");
-        }
-      });
-    });
-    </script>    
 </body>
 </html>
