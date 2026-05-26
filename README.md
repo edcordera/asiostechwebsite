@@ -4,6 +4,7 @@ ASIOS LLC — Static site for GitHub Pages
 Contents:
 - index.html
 - privacy.html
+- terms.html
 - feedback.html
 - css/styles.css
 - CNAME
