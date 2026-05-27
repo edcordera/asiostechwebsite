@@ -28,9 +28,9 @@ yarn-error.log*
 dist/
 build/
 *.log
+.wrangler/
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-

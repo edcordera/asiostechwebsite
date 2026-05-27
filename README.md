@@ -1,21 +1,53 @@
-ASIOS LLC — Static site for GitHub Pages
-======================================
+# ASIOS Websites
 
-Contents:
-- index.html
-- privacy.html
-- terms.html
-- feedback.html
-- css/styles.css
-- CNAME
+Static public sites for ASIOS LLC and its applications.
 
-How to deploy to GitHub Pages
-1. Create a new GitHub repository (public or private).
-2. Upload the files from this folder to the repository root (or push from your local machine).
-3. In the repository settings -> Pages, choose the branch (main) and folder (root) and save.
-4. Add the custom domain `asios.tech` in Pages settings (or let the CNAME file handle it).
-5. Make sure DNS A/ALIAS or CNAME records for `asios.tech` point to GitHub Pages as described by GitHub docs.
+## Production Domains
 
-Notes:
-- The feedback form uses a mailto: link because GitHub Pages does not support server-side form handling.
-- Edit content freely and replace placeholder sections with product pages when ready.
+| Domain | Site root | Hosting target |
+| --- | --- | --- |
+| `asios.tech` | Repository root | Existing GitHub Pages site |
+| `become.asios.tech` | `sites/become/` | Cloudflare Pages project `asios-become` |
+| `faro.asios.tech` | `sites/faro/` | Cloudflare Pages project `asios-faro` |
+
+The company site owns canonical portfolio legal documents at `https://asios.tech/privacy.html` and `https://asios.tech/terms.html`. Product-site `/privacy` and `/terms` routes redirect to those documents using Cloudflare Pages `_redirects` rules.
+
+## Layout
+
+```text
+index.html, privacy.html, terms.html, feedback.html  Company site
+sites/become/                                        Become product site
+sites/faro/                                          Faro product site
+```
+
+Every product directory is a standalone static deployment root. New products should follow the same structure: `sites/<product>/index.html`, local assets and styles, `_headers`, and `_redirects` to applicable legal pages.
+
+## Deploy
+
+Install dependencies and authenticate Wrangler once:
+
+```sh
+npm install
+npm run cloudflare:whoami
+```
+
+Deploy application sites independently:
+
+```sh
+npm run deploy:become
+npm run deploy:faro
+```
+
+The associated Cloudflare Pages custom domains are:
+
+```text
+become.asios.tech -> asios-become.pages.dev
+faro.asios.tech   -> asios-faro.pages.dev
+```
+
+Cloudflare manages DNS and TLS for these subdomains. The root company deployment remains on GitHub Pages during this staged migration.
+
+## Notes
+
+- These sites require no backend. Support contact is handled by email and legal content remains on the company site.
+- The root company site still uses `.github/workflows/static.yml` and its `CNAME` file.

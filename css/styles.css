@@ -266,6 +266,17 @@ main{
   color:var(--text-soft);
 }
 
+.card .product-link{
+  margin-top:18px;
+  color:var(--text);
+  font-size:0.92rem;
+  font-weight:600;
+}
+
+.card .product-link a:hover{
+  color:var(--accent);
+}
+
 .card-kicker{
   display:inline-block;
   margin-bottom:14px;
