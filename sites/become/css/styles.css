@@ -134,26 +134,15 @@ h1 {
   font-weight: 500;
 }
 .intro { max-width: 600px; margin-top: 22px; }
-.actions { display: flex; align-items: center; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
-.actions.centered { justify-content: center; }
-.button {
-  min-height: 52px;
+.store-actions { display: flex; align-items: center; margin-top: 32px; }
+.app-store-link {
+  width: fit-content;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 24px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-  font-weight: 650;
+  border-radius: 12px;
+  box-shadow: 0 18px 54px rgba(184,134,46,0.20);
 }
-.button.primary {
-  color: #090909;
-  border-color: rgba(253,205,107,0.70);
-  background: var(--gold-gradient);
-  box-shadow: 0 18px 54px rgba(184,134,46,0.24);
-}
-.button.secondary { color: var(--text-primary); background: rgba(255,255,255,0.05); }
-.button:hover, .nav-cta:hover { transform: translateY(-1px); }
+.app-store-link img { display: block; width: 180px; height: auto; }
+.app-store-link:hover, .nav-cta:hover { transform: translateY(-1px); }
 .proof { margin-top: 18px; color: var(--text-muted); font-size: 14px; line-height: 1.5; font-weight: 600; }
 
 .hero-phones { position: relative; min-height: 650px; }
@@ -233,15 +222,16 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
 .three-up { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
 .three-up article { padding-top: 24px; border-top: 1px solid rgba(253,205,107,0.24); }
 .privacy-box { max-width: 920px; padding: clamp(30px, 5vw, 54px); border-radius: 26px; }
-.pricing-section { padding: clamp(74px, 10vw, 126px) 0; text-align: center; }
-.pricing-section::before {
+.download-section { padding: clamp(74px, 10vw, 126px) 0; text-align: center; }
+.download-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 10%, rgba(253,205,107,0.18), transparent 32rem), var(--bg);
 }
-.pricing-inner { position: relative; z-index: 1; max-width: 820px; }
-.pricing-inner h2, .pricing-inner .body { margin-left: auto; margin-right: auto; }
+.download-inner { position: relative; z-index: 1; max-width: 820px; }
+.download-inner h2, .download-inner .body { margin-left: auto; margin-right: auto; }
+.centered-badge { margin-top: 30px; }
 .site-footer { padding: 28px 0 36px; border-top: 1px solid var(--hairline); color: var(--text-muted); background: #050505; font-size: 14px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
 .footer-inner strong { color: var(--text-primary); }
@@ -282,8 +272,7 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
   .hero-grid { gap: 30px; }
   h1 { font-size: clamp(64px, 19vw, 88px); }
   .hero-subhead { font-size: 25px; }
-  .actions { align-items: stretch; }
-  .button { width: 100%; }
+  .store-actions { align-items: stretch; }
   .hero-phones { min-height: 545px; }
   .phone { width: min(304px, calc(100vw - 54px)); border-radius: 48px; }
   .phone-shot { border-radius: 38px; }
