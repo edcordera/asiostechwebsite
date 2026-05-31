@@ -159,7 +159,8 @@ h1 {
 .hero-phones { position: relative; min-height: 650px; }
 .phone {
   width: 308px;
-  height: 628px;
+  height: auto;
+  aspect-ratio: 308 / 642;
   padding: 11px;
   border-radius: 52px;
   background: linear-gradient(145deg, #36383d, #09090a 42%, #1a1a1d);
@@ -168,14 +169,14 @@ h1 {
 .phone-main { position: absolute; right: 70px; top: 0; z-index: 2; }
 .phone-offset { position: absolute; right: 0; top: 94px; transform: scale(0.83) rotate(5deg); opacity: 0.78; }
 .phone-section { position: relative; justify-self: center; }
-.phone-small { position: relative; width: 260px; height: 562px; padding: 9px; border-radius: 44px; }
+.phone-small { position: relative; width: 260px; aspect-ratio: 260 / 542; padding: 9px; border-radius: 44px; }
 .phone-lift { margin-top: -52px; }
 .phone-shot {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 41px;
-  object-fit: cover;
+  object-fit: contain;
   background: #080809;
 }
 .phone-small .phone-shot { border-radius: 35px; }
@@ -228,7 +229,7 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
 }
 .screenshot-pair .phone-small:first-child { transform: rotate(-4deg); }
 .screenshot-pair .phone-small:last-child { transform: rotate(4deg); }
-.widgets-pair .phone-small { width: 250px; height: 541px; }
+.widgets-pair .phone-small { width: 250px; aspect-ratio: 250 / 520; }
 .three-up { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
 .three-up article { padding-top: 24px; border-top: 1px solid rgba(253,205,107,0.24); }
 .privacy-box { max-width: 920px; padding: clamp(30px, 5vw, 54px); border-radius: 26px; }
@@ -267,8 +268,8 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
   .mode-grid, .three-up { grid-template-columns: repeat(2, 1fr); }
   .phone-section { order: 2; }
   .screenshot-pair { min-height: 590px; order: 2; }
-  .phone-small { width: 232px; height: 502px; }
-  .widgets-pair .phone-small { width: 226px; height: 489px; }
+  .phone-small { width: 232px; }
+  .widgets-pair .phone-small { width: 226px; }
 }
 
 @media (max-width: 640px) {
@@ -284,7 +285,7 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
   .actions { align-items: stretch; }
   .button { width: 100%; }
   .hero-phones { min-height: 545px; }
-  .phone { width: min(304px, calc(100vw - 54px)); height: 560px; border-radius: 48px; }
+  .phone { width: min(304px, calc(100vw - 54px)); border-radius: 48px; }
   .phone-shot { border-radius: 38px; }
   .feature-band { padding: 70px 0; }
   .mode-grid, .three-up { grid-template-columns: 1fr; }
@@ -297,7 +298,6 @@ h2 + .body, h3 + .body { margin-top: 22px; max-width: 620px; }
   .screenshot-pair .phone-small,
   .widgets-pair .phone-small {
     width: min(270px, calc(100vw - 74px));
-    height: 584px;
   }
   .phone-lift { margin-top: -120px; }
   .footer-inner { display: grid; }
