@@ -138,6 +138,7 @@ h1 {
 .app-store-link {
   width: fit-content;
   display: inline-flex;
+  padding-top: 10px;
   border-radius: 12px;
   box-shadow: 0 18px 54px rgba(184,134,46,0.20);
 }
