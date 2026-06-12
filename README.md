@@ -10,7 +10,7 @@ Static public sites for ASIOS LLC and its applications.
 | `become.asios.tech` | `sites/become/` | Cloudflare Pages project `asios-become` |
 | `faro.asios.tech` | `sites/faro/` | Cloudflare Pages project `asios-faro` |
 
-The company site owns canonical portfolio legal documents at `https://asios.tech/privacy.html` and `https://asios.tech/terms.html`. Product-site `/privacy` and `/terms` routes redirect to those documents using Cloudflare Pages `_redirects` rules.
+The company site owns canonical portfolio legal and support pages at `https://asios.tech/privacy.html`, `https://asios.tech/terms.html`, and `https://asios.tech/support.html`. Product-site `/privacy`, `/terms`, and `/support` routes redirect to those documents using Cloudflare Pages `_redirects` rules.
 
 ## Layout
 
