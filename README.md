@@ -6,7 +6,7 @@ Static public sites for ASIOS LLC and its applications.
 
 | Domain | Site root | Hosting target |
 | --- | --- | --- |
-| `asios.tech` | Repository root | Existing GitHub Pages site |
+| `asios.tech` | Repository root | Cloudflare Pages project `asios-tech`, served through Worker `asios-tech-router` |
 | `become.asios.tech` | `sites/become/` | Cloudflare Pages project `asios-become` |
 | `faro.asios.tech` | `sites/faro/` | Cloudflare Pages project `asios-faro` |
 
@@ -34,20 +34,25 @@ npm run cloudflare:whoami
 Deploy application sites independently:
 
 ```sh
+npm run deploy:asios:router
 npm run deploy:become
 npm run deploy:faro
 ```
 
+The root company site is deployed to Cloudflare Pages project `asios-tech` from a clean bundle containing the root HTML files, `css/`, and `assets/`. The `asios-tech-router` Worker is routed on `asios.tech/*` and `www.asios.tech/*` and serves the Pages deployment while preserving existing `.html` legal/support URLs.
+
 The associated Cloudflare Pages custom domains are:
 
 ```text
+asios.tech        -> asios-tech-router -> asios-tech.pages.dev
+www.asios.tech    -> asios-tech-router -> asios-tech.pages.dev
 become.asios.tech -> asios-become.pages.dev
 faro.asios.tech   -> asios-faro.pages.dev
 ```
 
-Cloudflare manages DNS and TLS for these subdomains. The root company deployment remains on GitHub Pages during this staged migration.
+Cloudflare manages DNS and TLS for these domains. The previous GitHub Pages workflow is no longer the active production path for `asios.tech`.
 
 ## Notes
 
 - These sites require no backend. Support contact is handled by email and legal content remains on the company site.
-- The root company site still uses `.github/workflows/static.yml` and its `CNAME` file.
+- The legacy `.github/workflows/static.yml` and `CNAME` file remain in the repository but are not the live `asios.tech` deployment path while the Cloudflare Worker route is active.
