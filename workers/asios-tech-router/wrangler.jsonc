@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "asios-tech-router",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-02",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    {
+      "pattern": "asios.tech/*",
+      "zone_name": "asios.tech"
+    },
+    {
+      "pattern": "www.asios.tech/*",
+      "zone_name": "asios.tech"
+    }
+  ]
+}

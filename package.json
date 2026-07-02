@@ -4,6 +4,7 @@
   "scripts": {
     "cloudflare:whoami": "wrangler whoami",
     "cloudflare:projects": "wrangler pages project list",
+    "deploy:asios:router": "wrangler deploy --config workers/asios-tech-router/wrangler.jsonc",
     "deploy:become": "wrangler pages deploy sites/become --project-name asios-become --branch main",
     "deploy:faro": "wrangler pages deploy sites/faro --project-name asios-faro --branch main"
   },
