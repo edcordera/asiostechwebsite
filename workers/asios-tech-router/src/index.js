@@ -16,6 +16,16 @@ function upstreamPath(pathname) {
 export default {
   async fetch(request) {
     const incomingUrl = new URL(request.url);
+
+    // Keep the legal links embedded in the current Become iOS build valid
+    // while moving canonical legal pages to the Become branded domain.
+    if (incomingUrl.pathname === "/privacy.html") {
+      return Response.redirect("https://become.asios.tech/privacy", 302);
+    }
+    if (incomingUrl.pathname === "/terms.html") {
+      return Response.redirect("https://become.asios.tech/terms", 302);
+    }
+
     const upstreamUrl = new URL(UPSTREAM_ORIGIN);
     upstreamUrl.pathname = upstreamPath(incomingUrl.pathname);
     upstreamUrl.search = incomingUrl.search;
